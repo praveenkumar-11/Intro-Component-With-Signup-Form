@@ -1,0 +1,39 @@
+@media screen and (min-width: 900px) and (max-width: 1440px){
+    body{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url("/images/bg-intro-desktop.png");
+        .content{
+            width: 50%;
+            margin-block: auto;
+            margin-left: 1rem;
+            header{
+                text-align: left;
+                margin-left: 3rem;
+                .heading{
+                    font-size: 2rem;
+                    width: 20rem;
+                    line-height: 2.3rem;
+                    margin-left: 0;
+                }
+                .para{
+                    margin-left: 0;
+                }
+            }
+        }
+        .signup-main{
+            margin-left: 0;
+            margin-right: 1rem;
+            .trial-text-container{
+                margin-top: 0;
+                width: 28rem;
+            }
+            .sign-up-container{
+                margin-bottom: 0;
+                width: 28rem;
+            }
+        }
+    }
+}

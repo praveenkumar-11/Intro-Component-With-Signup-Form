@@ -1,0 +1,124 @@
+@import "globals";
+@import "reset";
+@import "mixins";
+
+body{
+    background: url("/images/bg-intro-mobile.png"), map-get($primary , "Red");
+    display: flex;
+    flex-direction: column;
+    .content{
+        margin-top: 6.25rem;
+        margin-bottom: 4.3125rem;
+        header{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            .heading{
+                @include main-text;
+                width: 14.375rem;
+                margin-inline: auto;
+                line-height: 1.8rem;
+                margin-bottom: 1.6875rem;
+            }
+            .para{
+                @include paras;
+                width: min(85% , 495px);
+                margin-inline: auto; 
+            }
+        }
+    }
+
+    .signup-main{
+        .trial-text-container{
+            width: min(85% , 540px);
+            padding-block:  15px;//max(1 , );
+            border-radius: 0.625rem;
+            margin-inline: auto;
+            background-color: map-get($accent , "Blue");
+            text-align: center;
+            box-shadow: $box-shadow;
+            margin-bottom: 1.5rem;
+            span{
+                @include paras;
+                font-weight: map-get($font-weight, "small");
+            }
+            .bold{
+                font-weight: map-get($font-weight, "dark");
+            }
+        }
+        .sign-up-container{
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            width: min(87%, 540px);
+            margin-inline: auto;
+            padding-block: 1.4375rem;
+            border-radius: 0.625rem;
+            box-shadow: $box-shadow;
+            margin-bottom: 4.25rem;
+            input , .submit-btn{
+                @include input-box;
+                &:not(button):focus{
+                    border: 1px solid black;
+                }
+                &:not(button)::placeholder{
+                    color: gray;
+                }
+                
+            }
+            .email-error{
+                &::placeholder{
+                    color: map-get($primary, "Red");
+                }
+            }
+
+            .error{
+                @include input-box-error;
+            }
+            p{
+                text-align: end;
+                margin-inline: 2.2rem;
+                color: map-get($primary, "Red");
+                font-weight: map-get($font-weight, "medium");
+                font-style: italic;
+                font-size: 0.8rem;
+                margin-top: 0;
+            }
+            .submit-btn{
+                background-color: #36CD88;
+                color: white;
+                text-transform: uppercase;
+                font-weight: map-get($font-weight, "medium");
+                box-shadow: 0 0.4rem #2FBB7E;
+                border: none;
+                padding: 0;
+                cursor: pointer;
+                transition: 0.2s;
+                transition-timing-function: cubic-bezier(.26,.76,.62,.6);
+                &:hover{
+                    background-color: #77E2B4;
+                    box-shadow: 0 0.4rem #6BCCA1; 
+                }
+            }
+
+            .terms{
+                text-align: center;
+                width: 85%;
+                margin-inline: auto;
+                margin-top: 1rem;
+                span{
+                    color: rgb(180, 180, 180);
+                    font-weight: map-get($font-weight, "medium");
+                    font-size: 0.8rem;
+                }
+                .bold{
+                    color: map-get($primary, "Red");
+                    font-weight: map-get($font-weight, "dark");
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@import "layoutTablet";

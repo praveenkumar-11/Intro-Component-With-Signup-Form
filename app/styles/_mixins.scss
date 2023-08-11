@@ -1,0 +1,30 @@
+@mixin main-text{
+    color: white;
+    font-weight: map-get($font-weight, "dark");
+    font-size: 1.375rem;
+}
+@mixin paras{
+    color: #fff6f3;
+    font-weight: map-get($font-weight, "small");
+    font-size: 1rem;
+}
+@mixin input-box{
+    height: 3.5rem;
+    width: 85%;
+    margin-inline: auto;
+    padding-left: 0.8rem;
+    padding-right: 2.5rem;
+    border-radius: 0.3125rem;
+    outline: 0;
+    border: 1px solid lightgray;
+    margin-top: 1rem;
+    color: black;
+    font-weight: map-get($font-weight, "large");
+}
+
+@mixin input-box-error{
+    border: 2px solid map-get($primary, "Red");
+    background-image: url("/images/icon-error.svg");
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+}

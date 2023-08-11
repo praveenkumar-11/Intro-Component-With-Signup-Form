@@ -1,0 +1,26 @@
+$primary:(
+    "Red": hsl(0, 100%, 74%),
+    "Green": hsl(154, 59%, 51%)
+);
+$neutral:(
+    "Dark Blue": hsl(249, 10%, 26%),
+    "Grayish Blue": hsl(246, 25%, 77%)
+);
+$accent:(
+    "Blue": hsl(248, 32%, 49%)
+);
+
+
+$font-size: 16px;
+
+$font-family: 'Poppins', sans-serif;
+
+$font-weight: (
+    "small": 400,
+    "medium": 500,
+    "large": 600,
+    "dark": 700
+);
+
+$box-shadow: 0 0.5rem rgba(0, 0, 0, 15%);
+
